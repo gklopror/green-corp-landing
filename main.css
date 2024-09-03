@@ -3,11 +3,16 @@ body {
     color: #213053;
     margin: 0;
 }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+    z-index: 1;
 }
 
 .header__logo {
@@ -25,7 +30,8 @@ header a {
     margin-right: 25px;
 }
 
-button, .form__submit{
+button,
+.form__submit {
     font-family: "Raleway", sans-serif;
     font-size: 15px;
     color: #fff;
@@ -44,6 +50,11 @@ button, .form__submit{
 .about__sun-image {
     width: 100px;
     height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
 }
 
 .about {
@@ -51,7 +62,7 @@ button, .form__submit{
     align-items: center;
     justify-content: space-around;
     padding-bottom: 115px;
-    padding-top: 115px; 
+    padding-top: 115px;
 }
 
 .about h1 {
@@ -72,7 +83,7 @@ button, .form__submit{
     margin-top: 20px;
 }
 
-.about__info {   
+.about__info {
     max-width: 550px;
 }
 
@@ -131,17 +142,17 @@ button, .form__submit{
     margin-bottom: 15px;
 }
 
-.form input, 
+.form input,
 .form select {
-     font-size: 18px;
-     color: #213053;
-     height: 60px;
-     padding-top: 0;
-     padding-bottom: 0;
-     padding-left: 20px;
-     padding-right: 20px;
-     border-radius: 15px;
-     border: none;
+    font-size: 18px;
+    color: #213053;
+    height: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+    border: none;
 }
 
 .form__submit {
@@ -162,9 +173,10 @@ button:hover {
     background-color: #fff;
     color: black;
 }
- button:hover {
+
+button:hover {
     background-color: #f6980c;
-    box-shadow: 0 16px 36px  rgba(246 152 12 / 20%);
+    box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
     transition: background-color, 0.3s ease-in;
 }
 
@@ -194,6 +206,7 @@ footer {
     opacity: 0.7;
     margin-bottom: 30px;
 }
+
 .footer__links {
     display: flex;
     flex-direction: column;
@@ -201,4 +214,257 @@ footer {
 
 .footer__links a {
     margin-bottom: 15px;
+}
+
+img .about__sun-image {
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 720px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header__logo {
+        height: 20px;
+    }
+
+    .about {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+
+    .about__info h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+
+    .about__sun-image {
+        height: 75px;
+        width: 75px;
+    }
+
+    .form {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__group {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer__links a {
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1024px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .footer__links a {
+        margin-bottom: 10px;
+    }
+
+    .about__info h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__sun-image {
+        height: 75px;
+        width: 75px;
+    }
+
+    .features {
+        margin: 50px 10px;
+    }
+
+    .cards {
+        grid-template-columns: auto;
+    }
+    /* .features__feedback-left {
+        margin-right: 0px;
+    }
+    .feedback__feedback-left {          // не работает нужно исправить 
+        font-size: 36px;   
+}
+} */
+}
+
+.animate__animated animate__slideInLeft {
+    animation-name: leftright;
+    animation-duration: 2s;
+    animation-timing-function: 1;
+}
+
+@keyframes leftright {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.features {
+    background-color: white;
+    padding: 115px 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.card {
+    display: block;
+    padding-top: 35px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    border: 1px solid #D9E4E6;
+    border-radius: 5px;
+    line-height: 22px;
+    opacity: 0.8;
+    justify-content: center;
+    text-align: center;
+}
+
+.fa-solar-panel, .clock247, .fa-arrow-trend-up {
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 20%;
+}
+
+.features__border {
+    margin: 50px;
+    border: 1px solid #E6EAF4;
+}
+
+.features__feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features__feedback-left {
+    margin-right: 10px;
+}
+.feedback__feedback-left h2 {
+    font-size: 48px;
+}
+
+.feedback__feedback-left p {
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+
+.features__box {
+    padding: 30px 40px 25px 40px;
+    color: rgb(255, 255, 255);
+    border: 1px solid #dc5e26;
+    border-radius: 25px;
+    margin: 10px;
+    text-align: center;
+}
+
+.features__box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.features__saving-box {
+    background-color: #dc5e26;
+    box-shadow: 0px 6px 0px rgba(221, 95, 38, 0.2);
+    margin-right: 30px;
+}
+
+.features__rate-box {
+    background-color: #1D263A;
+    box-shadow: 0px 6px 0px rgba(29, 38, 58, 0.2);
+}
+
+.fa-star {
+    color: #ff7039;
+}
+
+.promo__image {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.promo__image>img {
+    background-image: cover;
+    width: 50%; 
+    flex-shrink: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.promo__right {
+    margin: 0 auto;
+    padding: 20px;
+    height: 200px;
+    width: 35%;
+    border: 1px solid #dd5f26;
+    border-radius: 25px;
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+.promo {
+    background-color: #dd5f26;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border-radius: 25px;
 }

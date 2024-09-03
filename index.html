@@ -1,33 +1,102 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head> 
-        <title>Солнечные батареи GreenCorp</title>
-        <link rel="stylesheet" href="main.css">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    </head>
-    <body>
-<header>
-    <img class="header__logo" src="img/logo.svg">
-    <div class="header__controls">
-        <a href="contact">Контакты</a>
-        <button>Заказать</button>
-    </div>
-</header>
+
+<head>
+    <title>Солнечные батареи GreenCorp</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="fa/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <img class="header__logo" src="img/logo.svg">
+        <div class="header__controls">
+            <a href="contact">Контакты</a>
+            <button>Заказать</button>
+        </div>
+    </header>
     <section class="about">
         <div class="about__info">
-            <h1>Солнечные панели GreenRobotic</h1>
-            <p>Производите дешевую экологчески чистую электроэнергию из солнечного света</p>
-            <button>Узнать подробнее</button>
+            <h1 class="animate__animated animate__slideInLeft">Солнечные панели GreenRobotic</h1>
+            <p class="animate__animated animate__slideInLeft">Производите дешевую экологчески чистую электроэнергию из
+                солнечного света</p>
+            <button class="animate__animated animate__slideInLeft"> Узнать подробнее <i
+                    class="fa-regular fa-paper-plane"></i></button>
         </div>
-      <div class="about__images">
-      <img class="about__sun-image" src="img/sun.png">
-      <img class="about__image" src="img/solar-panel.png">
-    </div>
+        <div class="about__images animate__animated animate__slideInRight">
+            <img class="about__sun-image" src="img/sun.png">
+            <img class="about__image" src="img/solar-panel.png">
+        </div>
     </section>
+<section class="features" id="features">
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-solar-panel"></i>
+            <div class="card__logo">
+                <h3>Уменьшите счета за электричество</h3>
+                <p>Используйте чистую солнечную энергию для питания своего дома: уменьшите зависимость от электросети и счета за электричество.</p>
+            </div>
+        </div>
+        <div class="card">
+            <p class="clock247">24/7</p>
+            <div class="card__logo">
+                <h3>Мониторинг электроэнергии</h3>
+                <p>Управляйте своей системой солнечных панелей из любой точки мира с помощью специального мобильного приложения.</p>
+            </div>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <div class="card__logo">
+                <h3>Максимальная эффективность</h3>
+                <p>Солнечные панели GreenRobotic обеспечивают максимальное производство энергии круглый год, даже на крышах со сложными углами.</p>
+            </div>
+        </div>
+    </div>
+    <div class="features__border">
+    </div>
+    <div class="features__feedback">
+        <div class="feedback__feedback-left">
+                <h2>Нам доверяет<br>5000+ счастливых клиентов</h2>
+                <p>Мы помогли тысячам людей перейти на зеленую энергию.<br>После заказа мы позаботимся обо всем: доставка панелей, проект, установка, помощь в использовании</p>
+        </div>
+        <div class="feedback__feedback-right">
+                <div class="features__box features__saving-box">
+                    <h3>30 млн ₽</h3>
+                    <p>Помогаем экономить нашим клиентам ежемесячно.</p>
+                </div>
+                <div class="features__box features__rate-box">
+                    <h3>4.7</h3>
+                    <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+                    <p>Средняя оценка наших клиентов</p>
+                </div>
+
+        </div>
+    </div>
+    <section>
+        <div class="promo">
+        <div class="promo__image">
+            <img src="img/promo.webp" alt="person">
+            <div class="promo__right">
+                <p>Солнечные панели сертифицированы мировыми экспертами: система безопасна и надежна</p>
+                <p>Следите за накоплением энергии вашего дома в режиме реального времени и настраивайте процент расхода и накопления энергии</p>
+                <div>
+                    <button>Заказать <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+             </div>
+        </div>
+        </div>
+    </section>
+</section>
     <section class="form">
         <div class="form__container">
             <h1>Оставьте свои контакты</h1>
-            <p>Поможем подобрать модель. <br> Выбрать удоабный вариант доставки и установки. <br> Гарантия возврата денег.</p>
+            <p>Поможем подобрать модель</p>
+            <p>Выбрать удобный вариант доставки и установки</p>
+            <p>Гарантия возврата денег</p>
             <form>
                 <div class="form__group">
                     <label for="name">Ваше имя</label>
@@ -37,7 +106,7 @@
                     <label for="email">Электронный адрес</label>
                     <input type="email" placeholder="***@yandex.ru" id="email">
                 </div>
-                <div class="form__group"> 
+                <div class="form__group">
                     <label for="phone">Номер телефона</label>
                     <input type="tel" placeholder="7(999)999-99-99" id="phone">
                 </div>
@@ -51,36 +120,37 @@
                         <option value="100+">100 000₽</option>
                     </select>
                 </div>
-            <input type="button" class="form__submit" value="Отправить заявку">
-    </div>
+                <input type="button" class="form__submit" value="Отправить заявку">
+        </div>
     </section>
     <footer>
         <div class="footer__container">
             <div class="footer__group">
                 <h3>Позвонить нам</h3>
-                    <div class="footer__links">
-                <a href="tel:7(999)999-99-99">+7 (999) 999-99-99</a>
-                    </div>
-                    </div>
+                <div class="footer__links">
+                    <a href="tel:7(999)999-99-99">+7 (999) 999-99-99</a>
+                </div>
+            </div>
             <div class="footer__group">
                 <h3>Решения для дома</h3>
-                    <div class="footer__links">
-                <a href="paneli">Солнечные панели GreenRobotic</a>
-                <a href="paneli">Системы солнечных панелей GreenStation</a>
-                    </div>
-                     </div>
+                <div class="footer__links">
+                    <a href="paneli">Солнечные панели GreenRobotic</a>
+                    <a href="paneli">Системы солнечных панелей GreenStation</a>
+                </div>
+            </div>
             <div class="footer__group">
                 <h3>Компания</h3>
-                    <div class="footer__links">
-                <a href="#">Контакты</a>
-                <a href="#">Вакансии</a>
-                <a href="#">СМИ</a>
-                    </div>
-                    </div>
+                <div class="footer__links">
+                    <a href="#">Контакты</a>
+                    <a href="#">Вакансии</a>
+                    <a href="#">СМИ</a>
+                </div>
+            </div>
         </div>
         <div class="footer__copyright">
             <p>GreenCorp © 2024</p>
         </div>
     </footer>
-    </body>
-</html> 
+</body>
+
+</html>
